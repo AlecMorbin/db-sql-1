@@ -19,6 +19,8 @@ SELECT * FROM teachers WHERE phone is NOT NULL;
 --10
 SELECT * FROM students WHERE CHARINDEX('E',name,0) = 1;
 --11
+SELECT COUNT(name)AS Insegnati_che_iniziano_con_E FROM teachers WHERE name LIKE 'E%';
+--versione alternativa
 SELECT COUNT(name)AS Insegnati_che_iniziano_con_E FROM teachers WHERE CHARINDEX('E',name,0) = 1;
 --12
 SELECT COUNT(*)AS Senza_telefono FROM teachers WHERE phone IS NULL;
